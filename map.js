@@ -82,6 +82,7 @@ map.on('load', async () => {
   // Access the stations array
   let stations = jsonData.data.stations;
   console.log('Stations Array:', stations);
+  console.log('First station:', stations[0]);
 
   // Append circles to the SVG for each station
   const circles = svg

@@ -32,7 +32,7 @@ const svg = d3.select('#map').select('svg');
 
 // Helper function to convert station coordinates to pixel positions
 function getCoords(station) {
-  const point = new mapboxgl.LngLat(+station.Long, +station.Lat); // Convert lon/lat to Mapbox LngLat
+  const point = new mapboxgl.LngLat(+station.lon, +station.lat); // Convert lon/lat to Mapbox LngLat
   const { x, y } = map.project(point); // Project to pixel coordinates
   return { cx: x, cy: y }; // Return as object for use in SVG attributes
 }
@@ -82,7 +82,6 @@ map.on('load', async () => {
   // Access the stations array
   let stations = jsonData.data.stations;
   console.log('Stations Array:', stations);
-  console.log('First station:', stations[0]);
 
   // Append circles to the SVG for each station
   const circles = svg

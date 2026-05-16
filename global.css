@@ -3,7 +3,7 @@ body {
   max-width: 80em;
   min-height: 100vh;
   box-sizing: border-box;
-  margin: auto;
+  margin: 0 auto;
   padding: 1em;
 }
 
@@ -18,5 +18,5 @@ header label {
 }
 
 #time-slider {
-  width: 200px;
+  width: 300px;
 }

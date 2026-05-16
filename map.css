@@ -18,22 +18,7 @@ html, body {
   z-index: 1;
   width: 100%;
   height: 100%;
-  pointer-events:s none;
-}
-
-#map svg circle {
-  --color-departures: steelblue;
-  --color-arrivals: darkorange;
-  --color: color-mix(
-    in oklch,
-    var(--color-departures) calc(100% * var(--departure-ratio)),
-    var(--color-arrivals)
-  );
-  fill: var(--color);
-  fill-opacity: 0.6;
-  stroke: white;
-  stroke-width: 1;
-  pointer-events: auto;
+  pointer-events: none;
 }
 
 #map svg circle,
@@ -45,6 +30,14 @@ html, body {
     var(--color-departures) calc(100% * var(--departure-ratio)),
     var(--color-arrivals)
   );
+}
+
+#map svg circle {
+  fill: var(--color);
+  fill-opacity: 0.6;
+  stroke: white;
+  stroke-width: 1;
+  pointer-events: auto;
 }
 
 .legend {
